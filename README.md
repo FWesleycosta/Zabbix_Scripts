@@ -17,11 +17,12 @@ Abra o programa PowerShell, com privilegios de "Administrador"
 
 ~~~
 
-Observação: Para que funcione o script corretamente, necessário rodar o comando abaixo para realizar a instalação do módulo "Windows Update".
+Observação: Para que o script abaixo funcione corretamente, necessário realizar a instalação do módulo "Windows Update" no PowerShell.
 
-{ Install-Module -Name PSWindowsUpdate -Force }
+Commando: Install-Module -Name PSWindowsUpdate -Force 
 
  - powershell -NoProfile -ExecutionPolicy bypass -File "C:\zabbix-agent-scripts\Windows_Server\Obtendo_Updates.ps1"
+ 
 
  ° Link referência: https://adamtheautomator.com/pswindowsupdate/
 
