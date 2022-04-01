@@ -2,12 +2,12 @@
  
 Repositório voltado para salvar os scripts que tenho utilizado na ferramenta de monitoramento Zabbix
 
-# Passo para a utilização do repositório #
+# Explicação sobre utilização do repositório
 
-- 1º -  No servidor destino crie uma pasta nesse seguinte caminho: C:\zabbix-agent-scripts\
+- 1º -  No servidor destino crie uma pasta nesse seguinte caminho: 'C:\zabbix-agent-scripts\'
 - 2º -  Depois de criado, realize o download do pasta Windows e salve dentro do diretório, recentemente criado.
 
-# Antes de atribuirmos função ao Zabbix, vamos no servidor localmente
+# Validando script no servidor, antes de adicionar a função ao Zabbix #
 
 Abra o programa PowerShell, com privilegios de "Administrador"
 
@@ -23,7 +23,6 @@ Observação: Para que funcione o script corretamente, necessário rodar o coman
 
  - powershell -NoProfile -ExecutionPolicy bypass -File "C:\zabbix-agent-scripts\Windows_Server\Obtendo_Updates.ps1"
 
- ~~~
+ ° Link referência: https://adamtheautomator.com/pswindowsupdate/
 
-{Tire dúvidas sobre o processo acima}
- Link referência: https://adamtheautomator.com/pswindowsupdate/
+ ~~~
