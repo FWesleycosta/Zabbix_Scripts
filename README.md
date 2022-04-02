@@ -63,3 +63,6 @@ Você pode definir as propriedades de tempo limite do padrão de 3 segundos para
     |         Chave            |Atualizacao.Servidor                      |
     |    Tipo de informação    |Numeric (unsigned)                        |
     | Intervalo de atualização |1d                                        | 
+
+
+| **  | ** |
