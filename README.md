@@ -7,7 +7,7 @@ Repositório voltado para salvar os scripts que tenho utilizado na ferramenta de
 - 1º -  No servidor destino crie uma pasta nesse seguinte caminho: 'C:\zabbix-agent-scripts\'
 - 2º -  Depois de criado, realize o download do pasta Windows e salve dentro do diretório, recentemente criado.
 
-# Validando script no servidor#
+# Validando script no servidor
 
 Abra o programa PowerShell, com privilegios de "Administrador"
 
@@ -19,7 +19,7 @@ Abra o programa PowerShell, com privilegios de "Administrador"
 
 Observação: Para que o script abaixo funcione corretamente, necessário realizar a instalação do módulo "Windows Update" no PowerShell.
 
-######Commando: 
+#####Commando: 
 
 1º - Set-ExecutionPolicy RemoteSigned
 
@@ -47,4 +47,19 @@ Na hora de adicionar o 3º script, primeiro crie uma bat 'Update.bat' e copie a 
 powershell -NoProfile -ExecutionPolicy bypass -File "C:\zabbix-agent-scripts\Windows_Server\Obtendo_Updates.ps1"
 ```
 
-> Você pode definir as propriedades de tempo limite do padrão de 3 segundos para 1-30 segundos dentro da configuração dos agentes Zabbix e também na configuração do Zabbix Proxy se seu agente for monitorado por proxy.
+> Observação
+Você pode definir as propriedades de tempo limite do padrão de 3 segundos para 1-30 segundos dentro da configuração dos agentes Zabbix e também na configuração do Zabbix Proxy se seu agente for monitorado por proxy.
+
+
+# Configurando Zabbix Frontend
+
+###### Criar itens em hosts ou templates Zabbix
+
+
+    | Chave | Valor |
+    |-------|------|
+    | Nome  |Dias desde a última atualização do Windows|
+    | Tipo  |Agente Zabbix|
+    | Chave |Atualizacao.Servidor|
+    | Tipo de informação |Numeric (unsigned)|
+    | Intervalo de atualização |1d|
