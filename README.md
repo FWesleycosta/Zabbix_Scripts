@@ -15,9 +15,11 @@ Abra o programa PowerShell, com privilegios de "Administrador"
  
  - powershell -NoProfile -ExecutionPolicy bypass -File "C:\zabbix-agent-scripts\Windows_Server\Contagem_de_Dias_Desde_Última_Atualização.ps1"
 
+ - powershell -NoProfile -ExecutionPolicy bypass -File "C:\zabbix-agent-scripts\Windows_Server\Obtendo_Updates.ps1"
+
 ~~~
 
-Observação: Para que o script abaixo funcione corretamente, necessário realizar a instalação do módulo "Windows Update" no PowerShell.
+Observação: Para que o 3º script abaixo funcione corretamente, necessário realizar a instalação do módulo "Windows Update" no PowerShell.
 
 Commando: 
 
@@ -27,9 +29,7 @@ Commando:
 
 -> https://www.luizhenriquecampos.com.br/2018/09/01/instalando-o-modulo-powershell-do-windows-update/
 
- - powershell -NoProfile -ExecutionPolicy bypass -File "C:\zabbix-agent-scripts\Windows_Server\Obtendo_Updates.ps1"
-
- ~~~
+  ~~~
 
 # Alterando a configuração no Zabbix
 
@@ -56,10 +56,10 @@ Você pode definir as propriedades de tempo limite do padrão de 3 segundos para
 ###### Criar itens em hosts ou templates Zabbix
 
 
-    | Chave | Valor |
-    |-------|------|
-    | Nome  |Dias desde a última atualização do Windows|
-    | Tipo  |Agente Zabbix|
-    | Chave |Atualizacao.Servidor|
-    | Tipo de informação |Numeric (unsigned)|
-    | Intervalo de atualização |1d|
+    | Chave                    | Valor                                    |
+    |--------------------------|------------------------------------------|
+    |         Nome             |Dias desde a última atualização do Windows|
+    |         Tipo             |Agente Zabbix                             |
+    |         Chave            |Atualizacao.Servidor                      |
+    |    Tipo de informação    |Numeric (unsigned)                        |
+    | Intervalo de atualização |1d                                        | 
