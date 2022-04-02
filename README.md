@@ -19,7 +19,7 @@ Abra o programa PowerShell, com privilegios de "Administrador"
 
 Observação: Para que o script abaixo funcione corretamente, necessário realizar a instalação do módulo "Windows Update" no PowerShell.
 
-#####Commando: 
+Commando: 
 
 1º - Set-ExecutionPolicy RemoteSigned
 
