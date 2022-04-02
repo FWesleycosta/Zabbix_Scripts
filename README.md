@@ -64,5 +64,7 @@ Você pode definir as propriedades de tempo limite do padrão de 3 segundos para
     |    Tipo de informação    |Numeric (unsigned)                        |
     | Intervalo de atualização |1d                                        | 
 
-
-| **  | ** |
+| Primeiro cabeçalho  |  Segundo cabeçalho  |
+| ------------------- | ------------------- |
+|  Célula de conteúdo |  Célula de conteúdo |
+|  Célula de conteúdo |  Célula de conteúdo |   
