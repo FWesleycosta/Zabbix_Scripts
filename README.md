@@ -36,9 +36,15 @@ https://www.luizhenriquecampos.com.br/2018/09/01/instalando-o-modulo-powershell-
 
 No arquivo de configuração do Zabbix Agent, procure a opção UserParameters e adicione as informações abaixo:
 
-- UserParameter=Atualizacao.Servidor,powershell.exe -NoProfile -ExecutionPolicy bypass -File "C:\zabbix-agent-scripts\Windows_Server\Atualizações_Atribuidas_ao_Servidor.ps1"
-- UserParameter=Contagem.Atualizacao,powershell -NoProfile -ExecutionPolicy bypass -File "C:\zabbix-agent-scripts\Windows_Server\Contagem_de_Dias_Desde_Última_Atualização.ps1"
-- UserParameter=Windows.Update,"c:\zabbix\Update.bat"
+```
+UserParameter=Atualizacao.Servidor,powershell.exe -NoProfile -ExecutionPolicy bypass -File "C:\zabbix-agent-scripts\Windows_Server\Atualizações_Atribuidas_ao_Servidor.ps1"
+```
+```
+UserParameter=Contagem.Atualizacao,powershell -NoProfile -ExecutionPolicy bypass -File "C:\zabbix-agent-scripts\Windows_Server\Contagem_de_Dias_Desde_Última_Atualização.ps1"
+```
+```
+UserParameter=Windows.Update,"c:\zabbix\Update.bat"
+```
 
 
 Na hora de adicionar o 3º script, primeiro crie uma bat 'Update.bat' e copie a informação abaixo: 
