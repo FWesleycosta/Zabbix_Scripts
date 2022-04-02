@@ -68,3 +68,6 @@ Você pode definir as propriedades de tempo limite do padrão de 3 segundos para
 | ------------------- | ------------------- |
 |  Nome               |  Dias desde a última atualização do Windows |
 |  Tipo               |  Agente Zabbix      |   
+|  Chave              |  Atualizacao.Servidor  | 
+|  Tipo de informação |  Numeric (unsigned)      |   
+| Intervalo de atualização |  Atualizacao.Servidor  | 
