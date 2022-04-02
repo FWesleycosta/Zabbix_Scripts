@@ -55,19 +55,27 @@ Você pode definir as propriedades de tempo limite do padrão de 3 segundos para
 
 ###### Criar itens em hosts ou templates Zabbix
 
-
-    | Chave                    | Valor                                    |
-    |--------------------------|------------------------------------------|
-    |         Nome             |Dias desde a última atualização do Windows|
-    |         Tipo             |Agente Zabbix                             |
-    |         Chave            |Atualizacao.Servidor                      |
-    |    Tipo de informação    |Numeric (unsigned)                        |
-    | Intervalo de atualização |1d                                        | 
-
 |       Chave         |        Valor        |
 | ------------------- | ------------------- |
 |  Nome               |  Dias desde a última atualização do Windows |
 |  Tipo               |  Agente Zabbix      |   
 |  Chave              |  Atualizacao.Servidor  | 
 |  Tipo de informação |  Numeric (unsigned)      |   
-| Intervalo de atualização |  Atualizacao.Servidor  | 
+| Intervalo de atualização |  1D | 
+
+|       Chave         |        Valor        |
+| ------------------- | ------------------- |
+|  Nome               |  Contar atualizações desinstaladas do Windows |
+|  Tipo               |  Agente Zabbix      |   
+|  Chave              |  Contagem.Atualizacao  | 
+|  Tipo de informação |  Numeric (unsigned)      |   
+| Intervalo de atualização |  1D  | 
+
+|       Chave         |        Valor        |
+| ------------------- | ------------------- |
+|  Nome               |  Listando os Updates |
+|  Tipo               |  Agente Zabbix      |   
+|  Chave              |  Windows.Update  | 
+|  Tipo de informação |  Log      |   
+| Intervalo de atualização |  1D  | 
+
