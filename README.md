@@ -10,10 +10,10 @@
 Abra o programa PowerShell, com privilegios de "Administrador"
 
 ```
-powershell -NoProfile -ExecutionPolicy bypass -File "C:\zabbix-agent-scripts\Windows_Server\Atualizações_Atribuidas_ao_Servidor.ps1"
+powershell -NoProfile -ExecutionPolicy bypass -File "C:\zabbix-agent-scripts\Windows_Server\Atualizacoes_Atribuidas_ao_Servidor.ps1"
 ```
 ```
-powershell -NoProfile -ExecutionPolicy bypass -File "C:\zabbix-agent-scripts\Windows_Server\Contagem_de_Dias_Desde_Última_Atualização.ps1"
+powershell -NoProfile -ExecutionPolicy bypass -File "C:\zabbix-agent-scripts\Windows_Server\Contagem_de_Dias_Desde_Ultima_Atualizacao.ps1"
 ```
 ```
 powershell -NoProfile -ExecutionPolicy bypass -File "C:\zabbix-agent-scripts\Windows_Server\Obtendo_Updates.ps1"
@@ -37,10 +37,10 @@ https://www.luizhenriquecampos.com.br/2018/09/01/instalando-o-modulo-powershell-
 No arquivo de configuração do Zabbix Agent, procure a opção UserParameters e adicione as informações abaixo:
 
 ```
-UserParameter=Atualizacao.Servidor,powershell.exe -NoProfile -ExecutionPolicy bypass -File "C:\zabbix-agent-scripts\Windows_Server\Atualizações_Atribuidas_ao_Servidor.ps1"
+UserParameter=Atualizacao.Servidor,powershell.exe -NoProfile -ExecutionPolicy bypass -File "C:\zabbix-agent-scripts\Windows_Server\Atualizacoes_Atribuidas_ao_Servidor.ps1"
 ```
 ```
-UserParameter=Contagem.Atualizacao,powershell -NoProfile -ExecutionPolicy bypass -File "C:\zabbix-agent-scripts\Windows_Server\Contagem_de_Dias_Desde_Última_Atualização.ps1"
+UserParameter=Contagem.Atualizacao,powershell -NoProfile -ExecutionPolicy bypass -File "C:\zabbix-agent-scripts\Windows_Server\Contagem_de_Dias_Desde_Ultima_Atualizacao.ps1"
 ```
 ```
 UserParameter=Windows.Update,"C:\zabbix-agent-scripts\Windows_Server\Update.bat"
