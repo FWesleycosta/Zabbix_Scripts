@@ -15,7 +15,7 @@ Script: Contagem_de_dias_Desde_Última_Atualização
 ~~~~
 
 ~~~~
-Script: Obtendo_Updates
+Script: Listar Atualizações
 
 * Retorna a lista de Updates que estão disponiveis para instalação no servidor 
 
