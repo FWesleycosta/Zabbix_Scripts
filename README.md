@@ -43,7 +43,7 @@ UserParameter=Atualizacao.Servidor,powershell.exe -NoProfile -ExecutionPolicy by
 UserParameter=Contagem.Atualizacao,powershell -NoProfile -ExecutionPolicy bypass -File "C:\zabbix-agent-scripts\Windows_Server\Contagem_de_Dias_Desde_Última_Atualização.ps1"
 ```
 ```
-UserParameter=Windows.Update,"c:\zabbix\Update.bat"
+UserParameter=Windows.Update,"C:\zabbix-agent-scripts\Windows_Server\Update.bat"
 ```
 
 
@@ -52,6 +52,8 @@ Na hora de adicionar o 3º script, primeiro crie uma bat 'Update.bat' e copie a 
 ```
 @Echo off	
 powershell -NoProfile -ExecutionPolicy bypass -File "C:\zabbix-agent-scripts\Windows_Server\Obtendo_Updates.ps1"
+
+- Após esse processo, reinicie o serviço do Zabbix Agent no servidor destino.
 ```
 
  > ## Observação:
