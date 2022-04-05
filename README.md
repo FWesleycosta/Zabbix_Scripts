@@ -16,21 +16,8 @@ powershell -NoProfile -ExecutionPolicy bypass -File "C:\zabbix-agent-scripts\Win
 powershell -NoProfile -ExecutionPolicy bypass -File "C:\zabbix-agent-scripts\Windows_Server\Contagem_de_Dias_Desde_Ultima_Atualizacao.ps1"
 ```
 ```
-powershell -NoProfile -ExecutionPolicy bypass -File "C:\zabbix-agent-scripts\Windows_Server\Obtendo_Updates.ps1"
+powershell -NoProfile -ExecutionPolicy bypass -File "C:\zabbix-agent-scripts\Windows_Server\Listar_atualizacoes.ps1"
 ```
-
- > ## Observação: 
-~~~
-Para que o 3º script abaixo funcione corretamente, necessário realizar a instalação do módulo "Windows Update" no PowerShell.
-
-Commando: 
-
-1º - Set-ExecutionPolicy RemoteSigned
-
-2º - Install-Module -Name PSWindowsUpdate
-~~~
-
-https://www.luizhenriquecampos.com.br/2018/09/01/instalando-o-modulo-powershell-do-windows-update/
 
 ## Alterando a configuração no Zabbix
 
@@ -43,17 +30,7 @@ UserParameter=Atualizacao.Servidor,powershell.exe -NoProfile -ExecutionPolicy by
 UserParameter=Contagem.Atualizacao,powershell -NoProfile -ExecutionPolicy bypass -File "C:\zabbix-agent-scripts\Windows_Server\Contagem_de_Dias_Desde_Ultima_Atualizacao.ps1"
 ```
 ```
-UserParameter=Windows.Update,"C:\zabbix-agent-scripts\Windows_Server\Update.bat"
-```
-
-
-Na hora de adicionar o 3º script, primeiro crie uma bat 'Update.bat' e copie a informação abaixo: 
-
-```
-@Echo off	
-powershell -NoProfile -ExecutionPolicy bypass -File "C:\zabbix-agent-scripts\Windows_Server\Obtendo_Updates.ps1"
-
-- Após esse processo, reinicie o serviço do Zabbix Agent no servidor destino.
+UserParameter=Listar.Atualizacao,powershell -NoProfile -ExecutionPolicy bypass -File "C:\zabbix-agent-scripts\Windows_Server\Listar_atualizacoes.ps1"
 ```
 
  > ## Observação:
@@ -85,7 +62,7 @@ Você pode definir as propriedades de tempo limite do padrão de 3 segundos para
 | ------------------- | ------------------- |
 |  Nome               |  Listando os Updates |
 |  Tipo               |  Agente Zabbix      |   
-|  Chave              |  Windows.Update  | 
+|  Chave              |  Listar.atualizacao  | 
 |  Tipo de informação |  Log      |   
 | Intervalo de atualização |  1D  | 
 
